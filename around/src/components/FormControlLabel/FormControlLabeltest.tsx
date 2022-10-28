@@ -1,12 +1,11 @@
 import { render } from "@testing-library/react";
-import { IFormControlLabelProps } from "../../Interfaces/IFormControlLabelProps";
-import { FormControlLabel } from "./FormControlLabel";
+import { FormControlLabel, IFormControlLabelProps } from "./FormControlLabel";
 
 const defaultProps: IFormControlLabelProps = {
     label: "test",
     id: "test",
     checked: false,
-    change() {},
+    onChange() {},
 };
 
 describe("Component FormControlLabel", () => {

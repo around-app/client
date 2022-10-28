@@ -1,6 +1,5 @@
 import { render } from "@testing-library/react";
-import { IButtonProps } from "../../Interfaces/IButtonProps";
-import { Button } from "./Button";
+import { Button, IButtonProps } from "./Button";
 
 const defaultProps: IButtonProps = {
     id: "test",

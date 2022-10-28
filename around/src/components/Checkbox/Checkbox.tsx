@@ -1,7 +1,12 @@
 import React, { FC } from "react";
-import { ICheckbox } from "../../Interfaces/ICheckbox";
 import { StyledCheckbox } from "./style";
 
-export const Checkbox: FC<ICheckbox> = ({ id, checked, change }) => {
-    return <StyledCheckbox id={id} checked={checked} onChange={change} />;
+export interface ICheckboxProps {
+    id: string;
+    checked: boolean;
+    onChange: (event: React.SyntheticEvent) => void;
+}
+
+export const Checkbox: FC<ICheckboxProps> = (props) => {
+    return <StyledCheckbox {...props} />;
 };

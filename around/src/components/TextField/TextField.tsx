@@ -1,25 +1,16 @@
 import React, { FC } from "react";
-import { ITextFieldProps } from "../../Interfaces/ITextFieldProps";
 import { StyledTextField } from "./style";
 
-export const TextField: FC<ITextFieldProps> = ({
-    type,
-    placeholder,
-    change,
-    value,
-    id,
-    error,
-    helperText,
-}) => {
-    return (
-        <StyledTextField
-            id={id}
-            helperText={helperText}
-            type={type}
-            placeholder={placeholder}
-            onChange={change}
-            value={value}
-            error={error}
-        />
-    );
+export interface ITextFieldProps {
+    type: string;
+    id: string;
+    placeholder: string;
+    onChange: (event: React.ChangeEvent) => void;
+    value: string;
+    error?: boolean;
+    helperText?: string | false;
+}
+
+export const TextField: FC<ITextFieldProps> = (props) => {
+    return <StyledTextField {...props} />;
 };

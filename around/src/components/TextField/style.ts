@@ -7,21 +7,21 @@ export const StyledTextField = styled(TextField)({
 
     "& .MuiInputBase-root": {
         fontFamily: "Lexend Deca",
-        color: `${Colors.COLOR_LYNCH}`,
-        borderRadius: "0.625rem",
-        fontSize: "0.875rem",
-        background: `${Colors.COLOR_WHITE}`,
+        color: `${Colors.LYNCH}`,
+        borderRadius: "0.7rem",
+        fontSize: "0.9rem",
+        background: `${Colors.WHITE}`,
 
         "& fieldset": {
             border: "none",
         },
 
         "&.Mui-focused fieldset": {
-            border: `0.125rem solid ${Colors.COLOR_BLUE}`,
+            border: `0.125rem solid ${Colors.BLUE}`,
         },
 
         "&.Mui-error fieldset": {
-            border: `0.125rem solid ${Colors.COLOR_FLAMINGO}`,
+            border: `0.125rem solid ${Colors.FLAMINGO}`,
         },
     },
 });

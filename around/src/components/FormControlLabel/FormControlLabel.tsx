@@ -1,17 +1,20 @@
 import React, { FC } from "react";
 import { StyledFormControlLabel } from "./style";
-import { IFormControlLabelProps } from "../../Interfaces/IFormControlLabelProps";
-import { Checkbox } from "../Checkbox/Checkbox";
+import { Checkbox, ICheckboxProps } from "../Checkbox/Checkbox";
+
+export interface IFormControlLabelProps extends ICheckboxProps {
+    label: string;
+}
 
 export const FormControlLabel: FC<IFormControlLabelProps> = ({
-    change,
+    onChange,
     checked,
     id,
     label,
 }) => {
     return (
         <StyledFormControlLabel
-            control={<Checkbox id={id} checked={checked} change={change} />}
+            control={<Checkbox id={id} checked={checked} onChange={onChange} />}
             label={label}
         />
     );

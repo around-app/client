@@ -1,13 +1,12 @@
 import { render } from "@testing-library/react";
-import { TextField } from "./TextField";
-import { ITextFieldProps } from "../../Interfaces/ITextFieldProps";
+import { TextField, ITextFieldProps } from "./TextField";
 import userEvent from "@testing-library/user-event";
 
 const defaultProps: ITextFieldProps = {
     type: "test",
     id: "test",
     placeholder: "test",
-    change: (event) => {},
+    onChange: (event) => {},
     value: "test",
     error: false,
     helperText: "test",

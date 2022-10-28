@@ -4,9 +4,9 @@ import { Colors } from "../../constants/Colors";
 
 export const StyledFormControlLabel = styled(FormControlLabel)({
     "& .MuiTypography-root": {
-        color: `${Colors.COLOR_LYNCH}`,
+        color: `${Colors.LYNCH}`,
         fontFamily: "Montserrat",
-        fontSize: "0.875rem",
+        fontSize: "0.9rem",
         lineHeight: "1.25rem",
         fontWeight: 500,
     },

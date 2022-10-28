@@ -1,10 +1,9 @@
 import { render } from "@testing-library/react";
-import { ICheckbox } from "../../Interfaces/ICheckbox";
-import { Checkbox } from "./Checkbox";
+import { Checkbox, ICheckboxProps } from "./Checkbox";
 
-const defaultProps: ICheckbox = {
+const defaultProps: ICheckboxProps = {
     id: "test",
-    change(event) {},
+    onChange(event) {},
     checked: false,
 };
 
