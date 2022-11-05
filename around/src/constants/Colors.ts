@@ -4,4 +4,5 @@ export enum Colors {
     FLAMINGO = "#F2522A",
     WHITE = "#FFFFFF",
     LILAC = "#f4f2fb",
+    MALIBU = "#7CB8F7",
 }
