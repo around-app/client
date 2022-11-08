@@ -1,7 +1,8 @@
 import React from "react";
+import { StyledApp } from "./style";
 
 function App() {
-    return <div>Hello</div>;
+    return <StyledApp>Hello</StyledApp>;
 }
 
 export default App;
