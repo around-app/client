@@ -9,7 +9,7 @@ import { SettingsIcon } from "../ui/icons/Settings";
 import { LogOutIcon } from "../ui/icons/LogOut";
 import { CalenderIcon } from "../ui/icons/Calender";
 
-export type ItemsType =
+export type IconType =
     | "home"
     | "chat"
     | "contact"
@@ -19,40 +19,35 @@ export type ItemsType =
     | "log out";
 
 interface IListItemProps {
-    nameItem: ItemsType;
+    typeIcon: IconType;
+    text: string;
 }
 
-export const ListItem: FC<IListItemProps> = ({ nameItem }) => {
-    let icon;
-
-    switch (nameItem) {
+const getIcon = (icon: IconType) => {
+    switch (icon) {
         case "home":
-            icon = <HomeIcon />;
-            break;
+            return <HomeIcon />;
         case "chat":
-            icon = <ChatIcon />;
-            break;
+            return <ChatIcon />;
         case "contact":
-            icon = <ContactIcon />;
-            break;
+            return <ContactIcon />;
         case "notifications":
-            icon = <NotificationsIcon />;
-            break;
+            return <NotificationsIcon />;
         case "calender":
-            icon = <CalenderIcon />;
-            break;
+            return <CalenderIcon />;
         case "settings":
-            icon = <SettingsIcon />;
-            break;
-        case "log out":
-            icon = <LogOutIcon />;
+            return <SettingsIcon />;
+        default:
+            return <LogOutIcon />;
     }
+};
 
+export const ListItem: FC<IListItemProps> = ({ typeIcon, text }) => {
     return (
         <StyledListItem>
             <StyledListItemButton disableRipple>
-                <ListItemIcon>{icon}</ListItemIcon>
-                <ListItemText primary={nameItem} />
+                <ListItemIcon>{getIcon(typeIcon)}</ListItemIcon>
+                <ListItemText primary={text} />
             </StyledListItemButton>
         </StyledListItem>
     );

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ItemsType, ListItem } from "../../components/ListItem";
+import { IconType, ListItem } from "../../components/ListItem";
 import {
     ElementBox,
     LogOutBox,
@@ -9,19 +9,19 @@ import {
     WrapperItem,
 } from "./style";
 
-export const Navigation = () => {
-    const listItems: ItemsType[] = [
-        "home",
-        "chat",
-        "contact",
-        "notifications",
-        "calender",
-        "settings",
-    ];
+const listItems: IconType[] = [
+    "home",
+    "chat",
+    "contact",
+    "notifications",
+    "calender",
+    "settings",
+];
 
+export const Navigation = () => {
     const items = listItems.map((item) => (
         <WrapperItem key={item}>
-            <ListItem nameItem={item} />
+            <ListItem typeIcon={item} text={item} />
         </WrapperItem>
     ));
 
@@ -32,7 +32,7 @@ export const Navigation = () => {
                     <ElementBox>{items}</ElementBox>
                 </ItemBox>
                 <LogOutBox>
-                    <ListItem nameItem="log out" />
+                    <ListItem typeIcon="log out" text="log out" />
                 </LogOutBox>
             </NavContainer>
         </StyledNavigation>

@@ -3,7 +3,7 @@ import { ListItem } from "./ListItem";
 
 describe("Component ListItem", () => {
     it("Component renders", () => {
-        const { getByRole } = render(<ListItem nameItem="chat" />);
+        const { getByRole } = render(<ListItem typeIcon="chat" text="chat" />);
         expect(getByRole("button")).toBeInTheDocument();
         expect(getByRole("button")).toHaveTextContent("chat");
     });
